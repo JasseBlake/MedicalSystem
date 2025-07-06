@@ -123,11 +123,11 @@ namespace MedicalSystem.Services
                 }
 
                 // utwórz powiadomienie o anulowaniu
-                await _notificationService.CreateAppointmentNotificationAsync(
-                    appointment.Id,
-                    "Wizyta anulowana",
-                    $"Wizyta u {appointment.Doctor.FirstName} {appointment.Doctor.LastName} z pacjentem {appointment.Patient.FirstName} {appointment.Patient.LastName} została anulowana"
-                );
+               // await _notificationService.CreateAppointmentNotificationAsync(
+               //     appointment.Id,
+               //     "Wizyta anulowana",
+               //     $"Wizyta u {appointment.Doctor.FirstName} {appointment.Doctor.LastName} z pacjentem {appointment.Patient.FirstName} {appointment.Patient.LastName} została anulowana"
+               // );
 
                 _context.Appointments.Remove(appointment);
                 await _context.SaveChangesAsync();
